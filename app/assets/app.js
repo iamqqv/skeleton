@@ -12,3 +12,15 @@ import './js/test';
 
 // start the Stimulus application
 import './bootstrap';
+
+const $ = require('jquery');
+// this "modifies" the jquery module: adding behavior to it
+// the bootstrap module doesn't export/return anything
+require("bootstrap/dist/css/bootstrap.css");
+require("bootstrap/dist/js/bootstrap.js");
+
+
+// or you can include specific pieces
+// require('bootstrap/js/dist/tooltip');
+// require('bootstrap/js/dist/popover');
+

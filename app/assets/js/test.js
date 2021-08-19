@@ -1,1 +1,1 @@
-console.log('hello world123123123123!');
+console.log('vanilla JS is working. Woohoo!');
