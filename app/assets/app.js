@@ -8,7 +8,7 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
-import './js/test';
+import './js/vanilla';
 
 // start the Stimulus application
 import './bootstrap';
@@ -24,3 +24,4 @@ require("bootstrap/dist/js/bootstrap.js");
 // require('bootstrap/js/dist/tooltip');
 // require('bootstrap/js/dist/popover');
 
+import './js/vueapp.js';
