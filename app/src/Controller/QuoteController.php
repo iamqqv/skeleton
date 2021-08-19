@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class QuoteController extends AbstractController
 {
-    #[Route('/quote', name: 'quote')]
+    #[Route('/', name: 'index')]
     public function index(QuoteRepository $quoteRepository): Response
     {
         return $this->render('quote/index.html.twig',
