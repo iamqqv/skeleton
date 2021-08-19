@@ -7,7 +7,7 @@ Clone this repository, run `docker-compose up -d` and start coding.
 ## How to get up and running:
 
 1. Clone this repository
-2. Stop all running Docker Containers with ports 80 (Webserver) & 3306 (Database)
+2. Stop all running Docker Containers with port 80 (Webserver) & 3306 (Database)
 3. run `docker-compose up -d` (for detached mode) in your terminal
 4. move into the app directory via `cd app/`
    1. run `composer install` or `composer update` to install dependencies
@@ -21,6 +21,7 @@ If there's an error occuring like:
 
 you should update your node version: https://nodejs.org/en/
 
+## Frontend
 How to add **SCSS**:
 Inside `app/assets/styles` there are the scss files that you can modify. To see your changes, just run `yarn encore dev (--watch)`
 
