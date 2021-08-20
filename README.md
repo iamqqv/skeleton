@@ -7,9 +7,9 @@ Clone this repository, run `docker-compose up -d` and start coding.
 ## How to get up and running:
 
 1. Clone this repository
-2. Stop all running Docker Containers with port 80 (Webserver) & 3306 (Database)
-3. run `docker-compose up -d` (for detached mode) in your terminal
-4. copy `.env` and create a `.env.local` file and change the `DATABASE_URL` parameter to `DATABASE_URL="mysql://root:secret@database:3306/symfony_docker?serverVersion=8.0"`
+2. Stop all running Docker Containers so there's no same ports problem
+3. move into the `app/` directory via `cd app/` and copy `.env` file, create a `.env.local` file and change the `DATABASE_URL` parameter to `DATABASE_URL="mysql://root:secret@database:3306/symfony_docker?serverVersion=8.0"`
+4. run `docker-compose up -d` (for detached mode) in your terminal
 5. connect to your php container via `docker-compose exec php bash`
    1. run `composer install` or `composer update` to install dependencies
 6. Exit the php container and move into the app directory via `cd app/` run `yarn install` in the to install javascript dependencies
