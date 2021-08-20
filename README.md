@@ -9,10 +9,12 @@ Clone this repository, run `docker-compose up -d` and start coding.
 1. Clone this repository
 2. Stop all running Docker Containers with port 80 (Webserver) & 3306 (Database)
 3. run `docker-compose up -d` (for detached mode) in your terminal
-4. move into the app directory via `cd app/`
+4. copy `.env` and create a `.env.local` file and change the `DATABASE_URL` parameter to `DATABASE_URL="mysql://root:secret@database:3306/symfony_docker?serverVersion=8.0"`
+5. connect to your php container via `docker-compose exec php bash`
    1. run `composer install` or `composer update` to install dependencies
-   2. run `yarn install` to install javascript dependencies
-5. visit http://localhost:8080/
+6. Exit the php container and move into the app directory via `cd app/` run `yarn install` in the to install javascript dependencies
+7. run `yarn encore dev` to build all necessary styles
+8. visit http://localhost:8080/
 
 ## Troubleshooting
 If there's an error occuring like:
@@ -73,7 +75,7 @@ In addition to scaffolding a container from the PHP-FPM image, we will do the fo
 3. Install composer
 4. Install the Symfony CLI
 
-Instead of specifying an image, we specify a build context. This way, when the docker-compose command is run, the instructions declared in php/Dockerfile will be used to build the container.
+Instead of specifying an image, we specify a build context. This way, when the docker-compose command is run, the instructions declared in `php/Dockerfile` will be used to build the container.
 
 Port 9000 on the computer is mapped to `port 9000` on the container, just as we mapped a port on the computer to a port on the container for the MySQL database.
 
